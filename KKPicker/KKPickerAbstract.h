@@ -5,7 +5,7 @@
 //  Created by Jaykon on 14-5-22.
 //  Copyright (c) 2014年 Maxicn. All rights reserved.
 //
-
+#import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 @protocol KKPickerAbstractDelegate
 @optional

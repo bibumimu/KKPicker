@@ -32,6 +32,7 @@
         self.rowsData=rowsData;
         [_picker reloadAllComponents];
         if(selectedIndex<[rowsData count]){
+            _selectedRowIndex=selectedIndex;
             [_picker selectRow:selectedIndex inComponent:0 animated:NO];
         }
     }

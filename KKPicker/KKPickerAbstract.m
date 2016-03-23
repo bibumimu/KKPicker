@@ -29,13 +29,13 @@
         UIView *componentView=[self KKPickerComponentView];
         
         UIToolbar* numberToolbar = [[UIToolbar alloc]initWithFrame:CGRectMake(0, 0,wW, 44)];
-        numberToolbar.barStyle = UIBarStyleBlackTranslucent;
-        UIBarButtonItem *barCancel=[[UIBarButtonItem alloc]initWithTitle:@"取消" style:UIBarButtonItemStyleBordered target:self action:@selector(KKPickerCancel)];
-        [barCancel setTintColor:[UIColor whiteColor]];
-        UIBarButtonItem *barCommit=[[UIBarButtonItem alloc]initWithTitle:@"确定" style:UIBarButtonItemStyleDone target:self action:@selector(KKPickerCommit)];
-        [barCommit setTintColor:[UIColor whiteColor]];
+        numberToolbar.barStyle = UIBarStyleDefault;
+        UIBarButtonItem *barCancel=[[UIBarButtonItem alloc]initWithTitle:@" 取消 " style:UIBarButtonItemStyleBordered target:self action:@selector(KKPickerCancel)];
+        [barCancel setTintColor:[UIColor grayColor]];
+        UIBarButtonItem *barCommit=[[UIBarButtonItem alloc]initWithTitle:@" 确定 " style:UIBarButtonItemStyleDone target:self action:@selector(KKPickerCommit)];
+        [barCommit setTintColor:[UIColor darkGrayColor]];
         UIBarButtonItem *middleBarItem=[[UIBarButtonItem alloc]initWithTitle:aTitle style:UIBarButtonItemStylePlain target:nil action:nil];
-        [middleBarItem setTintColor:[UIColor whiteColor]];
+        [middleBarItem setTintColor:[UIColor blackColor]];
         numberToolbar.items = [NSArray arrayWithObjects:
                                barCancel,
                                [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil],

@@ -5,7 +5,7 @@
 //  Created by Jaykon on 14-5-22.
 //  Copyright (c) 2014年 Maxicn. All rights reserved.
 //
-
+#import "SafeControl.h"
 #import "KKAreaPicker.h"
 @implementation KKAdrress
 @end
@@ -50,13 +50,13 @@
     if(adress){
         if(adress.provice){
             NSUInteger index0=[stateArray indexOfObject:adress.provice];
-            [defaultSelected safeAddObject:[NSNumber numberWithInt:index0]];
+            [defaultSelected safeAddObject:[NSNumber numberWithInteger:index0]];
             if(adress.city){
                 NSUInteger index1=[[cityDic safeObjectForKey:adress.provice] indexOfObject:adress.city];
-                [defaultSelected safeAddObject:[NSNumber numberWithInt:index1]];
+                [defaultSelected safeAddObject:[NSNumber numberWithInteger:index1]];
                 if(adress.area){
-                    NSUInteger index2=[[cityDic safeObjectForKey:adress.city] indexOfObject:adress.area];
-                    [defaultSelected safeAddObject:[NSNumber numberWithInt:index2]];
+                    NSUInteger index2=[[areaDic safeObjectForKey:adress.city] indexOfObject:adress.area];
+                    [defaultSelected safeAddObject:[NSNumber numberWithInteger:index2]];
                 }
             }
         }
